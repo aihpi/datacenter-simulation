@@ -1,0 +1,151 @@
+{
+  "pairs": [
+    {
+      "x": "eis_verkauf",
+      "y": "temperatur_c",
+      "true_label": "causal",
+      "confounder": null,
+      "confounder_in_data": false,
+      "notes": ""
+    },
+    {
+      "x": "kaltgetraenke_verkauf",
+      "y": "temperatur_c",
+      "true_label": "causal",
+      "confounder": null,
+      "confounder_in_data": false,
+      "notes": ""
+    },
+    {
+      "x": "badegaeste",
+      "y": "temperatur_c",
+      "true_label": "causal",
+      "confounder": null,
+      "confounder_in_data": false,
+      "notes": ""
+    },
+    {
+      "x": "ertrinkungsunfaelle",
+      "y": "temperatur_c",
+      "true_label": "causal",
+      "confounder": null,
+      "confounder_in_data": false,
+      "notes": ""
+    },
+    {
+      "x": "temperatur_c",
+      "y": "sonnenstunden",
+      "true_label": "causal",
+      "confounder": null,
+      "confounder_in_data": false,
+      "notes": ""
+    },
+    {
+      "x": "badegaeste",
+      "y": "ertrinkungsunfaelle",
+      "true_label": "causal",
+      "confounder": null,
+      "confounder_in_data": false,
+      "notes": ""
+    },
+    {
+      "x": "eis_verkauf",
+      "y": "kaltgetraenke_verkauf",
+      "true_label": "confounder",
+      "confounder": "temperatur_c",
+      "confounder_in_data": true,
+      "confidence": 0.93,
+      "reasoning": "Ice-cream and cold-drink sales track each other because both are pulled up by hot weather (temperatur_c), not because one drives the other. Hold temperature fixed and the shared movement largely disappears.",
+      "needed_data": "temperatur_c controlled for via partial correlation (already measured in this dataset).",
+      "ruled_out": [
+        {"label": "causal", "why": "Selling ice cream doesn't cause more cold drinks to be sold."},
+        {"label": "reverse_causal", "why": "And cold-drink sales don't drive ice-cream sales either."},
+        {"label": "selection", "why": "Both are full daily sales totals, not a filtered subset of days."},
+        {"label": "chance", "why": "The association is strong and consistent across the whole summer, not noise."}
+      ],
+      "notes": ""
+    },
+    {
+      "x": "badegaeste",
+      "y": "eis_verkauf",
+      "true_label": "confounder",
+      "confounder": "temperatur_c",
+      "confounder_in_data": true,
+      "confidence": 0.94,
+      "reasoning": "Pool visitors and ice-cream sales rise and fall together only because hot weather (temperatur_c) drives both. Neither going swimming nor buying ice cream causes the other; once temperature is held fixed the link all but vanishes.",
+      "needed_data": "temperatur_c held constant (partial correlation) — available here, so the confounder can be confirmed directly.",
+      "ruled_out": [
+        {"label": "causal", "why": "Going to the pool doesn't make the town buy more ice cream."},
+        {"label": "reverse_causal", "why": "Buying ice cream doesn't send people to the pool."},
+        {"label": "selection", "why": "Both figures cover the whole town each day, not a hand-picked subgroup."},
+        {"label": "chance", "why": "The co-movement is very strong and repeats across the entire summer."}
+      ],
+      "notes": ""
+    },
+    {
+      "x": "badegaeste",
+      "y": "kaltgetraenke_verkauf",
+      "true_label": "confounder",
+      "confounder": "temperatur_c",
+      "confounder_in_data": true,
+      "notes": ""
+    },
+    {
+      "x": "ertrinkungsunfaelle",
+      "y": "kaltgetraenke_verkauf",
+      "true_label": "confounder",
+      "confounder": "temperatur_c",
+      "confounder_in_data": true,
+      "notes": ""
+    },
+    {
+      "x": "eis_verkauf",
+      "y": "ertrinkungsunfaelle",
+      "true_label": "confounder",
+      "confounder": "temperatur_c",
+      "confounder_in_data": true,
+      "confidence": 0.95,
+      "reasoning": "The textbook spurious link: ice-cream sales and drowning accidents both spike on hot days because warm weather (temperatur_c) sends people to buy ice cream AND into the water. There is no causal arrow between them — controlling for temperature collapses the correlation.",
+      "needed_data": "temperatur_c controlled for via partial correlation (already measured here).",
+      "ruled_out": [
+        {"label": "causal", "why": "Eating ice cream obviously cannot cause drowning accidents."},
+        {"label": "reverse_causal", "why": "And drownings cannot drive ice-cream sales."},
+        {"label": "selection", "why": "Both are daily town-wide counts, not a selected sample."},
+        {"label": "chance", "why": "The seasonal pattern is far too strong and regular to be coincidence."}
+      ],
+      "notes": ""
+    },
+    {
+      "x": "kaltgetraenke_verkauf",
+      "y": "sonnenstunden",
+      "true_label": "confounder",
+      "confounder": "temperatur_c",
+      "confounder_in_data": true,
+      "notes": ""
+    },
+    {
+      "x": "eis_verkauf",
+      "y": "sonnenstunden",
+      "true_label": "confounder",
+      "confounder": "temperatur_c",
+      "confounder_in_data": true,
+      "notes": ""
+    },
+    {
+      "x": "badegaeste",
+      "y": "sonnenstunden",
+      "true_label": "confounder",
+      "confounder": "temperatur_c",
+      "confounder_in_data": true,
+      "notes": ""
+    },
+    {
+      "x": "ertrinkungsunfaelle",
+      "y": "sonnenstunden",
+      "true_label": "confounder",
+      "confounder": "temperatur_c",
+      "confounder_in_data": true,
+      "notes": ""
+    }
+  ]
+}

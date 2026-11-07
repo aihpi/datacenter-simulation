@@ -1,0 +1,76 @@
+{
+  "pairs": [
+    {
+      "x": "bestellungen",
+      "y": "umsatz_eur",
+      "true_label": "causal",
+      "confounder": null,
+      "confounder_in_data": false,
+      "notes": ""
+    },
+    {
+      "x": "besucher",
+      "y": "bestellungen",
+      "true_label": "causal",
+      "confounder": null,
+      "confounder_in_data": false,
+      "notes": ""
+    },
+    {
+      "x": "besucher",
+      "y": "umsatz_eur",
+      "true_label": "causal",
+      "confounder": null,
+      "confounder_in_data": false,
+      "notes": ""
+    },
+    {
+      "x": "werbebudget_eur",
+      "y": "besucher",
+      "true_label": "causal",
+      "confounder": null,
+      "confounder_in_data": false,
+      "notes": ""
+    },
+    {
+      "x": "werbebudget_eur",
+      "y": "bestellungen",
+      "true_label": "causal",
+      "confounder": null,
+      "confounder_in_data": false,
+      "notes": ""
+    },
+    {
+      "x": "werbebudget_eur",
+      "y": "umsatz_eur",
+      "true_label": "causal",
+      "confounder": null,
+      "confounder_in_data": false,
+      "notes": ""
+    },
+    {
+      "x": "newsletter_versand",
+      "y": "bestellungen",
+      "true_label": "causal",
+      "confounder": null,
+      "confounder_in_data": false,
+      "notes": ""
+    },
+    {
+      "x": "newsletter_versand",
+      "y": "besucher",
+      "true_label": "causal",
+      "confounder": null,
+      "confounder_in_data": false,
+      "notes": ""
+    },
+    {
+      "x": "newsletter_versand",
+      "y": "umsatz_eur",
+      "true_label": "causal",
+      "confounder": null,
+      "confounder_in_data": false,
+      "notes": ""
+    }
+  ]
+}

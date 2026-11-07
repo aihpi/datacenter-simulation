@@ -1,0 +1,36 @@
+{
+  "pairs": [
+    {
+      "x": "pruefungsnote",
+      "y": "lernstunden",
+      "true_label": "causal",
+      "confounder": null,
+      "confounder_in_data": false,
+      "notes": ""
+    },
+    {
+      "x": "pruefungsnote",
+      "y": "anwesenheit_prozent",
+      "true_label": "causal",
+      "confounder": null,
+      "confounder_in_data": false,
+      "notes": ""
+    },
+    {
+      "x": "anwesenheit_prozent",
+      "y": "lernstunden",
+      "true_label": "confounder",
+      "confounder": "Fleiß / Lerntyp",
+      "confounder_in_data": false,
+      "notes": ""
+    },
+    {
+      "x": "anwesenheit_prozent",
+      "y": "schlafstunden",
+      "true_label": "chance",
+      "confounder": null,
+      "confounder_in_data": false,
+      "notes": ""
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+/* Tailwind v4 for the shadcn-style chart layer.
+ *
+ * Preflight (the base reset) is deliberately NOT imported: the app ships a
+ * mature hand-written design system in App.css/index.css, and Tailwind's reset
+ * would clobber it. We pull in only the `theme` (tokens) and `utilities` layers.
+ * Because these live in @layer, unlayered App.css always wins on conflicts,
+ * so utilities apply inside the chart components without touching legacy views.
+ */
+@layer theme, base, components, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities);
+
+@theme static {
+  --color-background: #0b0e12;
+  --color-foreground: #d7dde5;
+  --color-card: #11161c;
+  --color-card-foreground: #d7dde5;
+  --color-muted: #151b22;
+  --color-muted-foreground: #7d8896;
+  --color-border: #232b35;
+  --color-input: #2f3946;
+  --color-popover: #11161c;
+  --color-popover-foreground: #d7dde5;
+  --color-ring: #f6a800;
+  --color-primary: #f6a800;
+  --color-primary-foreground: #0b0e12;
+  --color-secondary: #151b22;
+  --color-secondary-foreground: #d7dde5;
+  --color-accent: #1d1809;
+  --color-accent-foreground: #ffc341;
+  --color-destructive: #f85149;
+  --color-destructive-foreground: #0b0e12;
+  --color-positive: #56d364;
+  --color-negative: #f85149;
+
+  --radius-sm: 2px;
+  --radius-md: 3px;
+  --radius-lg: 4px;
+  --radius-xl: 4px;
+
+  --font-sans: "Geist Mono", "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --font-mono: "Geist Mono", "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+
+  --color-chart-1: #39c5cf;
+  --color-chart-2: #f6a800;
+  --color-chart-3: #56d364;
+  --color-chart-4: #bc8cff;
+  --color-chart-5: #dd6108;
+  --color-chart-6: #f85149;
+  --color-chart-7: #58a6ff;
+  --color-chart-8: #8b96a3;
+}
+
+/* The three preflight rules the shadcn components cannot live without, scoped
+ * into @layer base so unlayered App.css keeps winning on every conflict:
+ * Tailwind's `border` utility only sets a width, `<button>` would otherwise
+ * carry the UA's grey buttonface, and form controls would fall back to Arial
+ * instead of Geist. */
+@layer base {
+  *,
+  ::before,
+  ::after {
+    border-width: 0;
+    border-style: solid;
+  }
+
+  button {
+    background-color: transparent;
+    background-image: none;
+  }
+
+  button,
+  input,
+  optgroup,
+  select,
+  textarea {
+    font-family: inherit;
+    font-feature-settings: inherit;
+    font-variation-settings: inherit;
+    letter-spacing: inherit;
+  }
+}

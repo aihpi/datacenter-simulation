@@ -1,0 +1,13 @@
+{
+  "description": "Stork pairs vs human births across regions.",
+  "pairs": [
+    {
+      "x": "stork_pairs",
+      "y": "human_births",
+      "true_label": "confounder",
+      "confounder": "regional_development",
+      "confounder_in_data": false,
+      "notes": "Region size/development drives both; absent from the data."
+    }
+  ]
+}

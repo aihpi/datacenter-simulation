@@ -1,0 +1,76 @@
+{
+  "pairs": [
+    {
+      "x": "sport_minuten",
+      "y": "schritte",
+      "true_label": "causal",
+      "confounder": null,
+      "confounder_in_data": false,
+      "notes": ""
+    },
+    {
+      "x": "sport_minuten",
+      "y": "ruhepuls",
+      "true_label": "causal",
+      "confounder": null,
+      "confounder_in_data": false,
+      "notes": ""
+    },
+    {
+      "x": "kalorien",
+      "y": "zucker_g",
+      "true_label": "causal",
+      "confounder": null,
+      "confounder_in_data": false,
+      "notes": ""
+    },
+    {
+      "x": "zucker_g",
+      "y": "gewicht_kg",
+      "true_label": "causal",
+      "confounder": null,
+      "confounder_in_data": false,
+      "notes": ""
+    },
+    {
+      "x": "kalorien",
+      "y": "gewicht_kg",
+      "true_label": "causal",
+      "confounder": null,
+      "confounder_in_data": false,
+      "notes": ""
+    },
+    {
+      "x": "sport_minuten",
+      "y": "gewicht_kg",
+      "true_label": "causal",
+      "confounder": null,
+      "confounder_in_data": false,
+      "notes": ""
+    },
+    {
+      "x": "schritte",
+      "y": "ruhepuls",
+      "true_label": "confounder",
+      "confounder": "sport_minuten",
+      "confounder_in_data": true,
+      "notes": ""
+    },
+    {
+      "x": "schritte",
+      "y": "gewicht_kg",
+      "true_label": "confounder",
+      "confounder": "sport_minuten",
+      "confounder_in_data": true,
+      "notes": ""
+    },
+    {
+      "x": "ruhepuls",
+      "y": "gewicht_kg",
+      "true_label": "chance",
+      "confounder": null,
+      "confounder_in_data": false,
+      "notes": ""
+    }
+  ]
+}

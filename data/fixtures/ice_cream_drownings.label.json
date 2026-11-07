@@ -1,0 +1,13 @@
+{
+  "description": "Ice cream sales vs drownings, with temperature recorded.",
+  "pairs": [
+    {
+      "x": "ice_cream_sales",
+      "y": "drownings",
+      "true_label": "confounder",
+      "confounder": "temperature",
+      "confounder_in_data": true,
+      "notes": "Classic summer confounder; temperature is present so it is verifiable."
+    }
+  ]
+}

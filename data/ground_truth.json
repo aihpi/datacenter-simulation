@@ -1,0 +1,298 @@
+[
+  {
+    "x": "hours_studied",
+    "y": "exam_score",
+    "true_label": "causal",
+    "confounder": null,
+    "confounder_in_data": false,
+    "notes": "exam_score = 8*hours_studied + noise; direct causal X->Y."
+  },
+  {
+    "x": "resting_heart_rate",
+    "y": "exercise_minutes",
+    "true_label": "reverse_causal",
+    "confounder": null,
+    "confounder_in_data": false,
+    "notes": "exercise lowers resting heart rate; arrow is Y->X."
+  },
+  {
+    "x": "ice_cream_sales",
+    "y": "drownings",
+    "true_label": "confounder",
+    "confounder": "temperature",
+    "confounder_in_data": true,
+    "notes": "both driven by temperature, which IS a column."
+  },
+  {
+    "x": "temperature",
+    "y": "ice_cream_sales",
+    "true_label": "causal",
+    "confounder": null,
+    "confounder_in_data": false,
+    "notes": "temperature drives ice cream sales (the root cause itself)."
+  },
+  {
+    "x": "temperature",
+    "y": "drownings",
+    "true_label": "causal",
+    "confounder": null,
+    "confounder_in_data": false,
+    "notes": "temperature drives drownings (the root cause itself)."
+  },
+  {
+    "x": "tv_per_capita",
+    "y": "life_expectancy",
+    "true_label": "confounder",
+    "confounder": "national_wealth",
+    "confounder_in_data": false,
+    "notes": "both driven by hidden WEALTH, which is NOT a column."
+  },
+  {
+    "x": "talent",
+    "y": "looks",
+    "true_label": "selection",
+    "confounder": null,
+    "confounder_in_data": false,
+    "notes": "independent in the population; collider selection on talent+looks."
+  },
+  {
+    "x": "diet_type",
+    "y": "cholesterol",
+    "true_label": "causal",
+    "confounder": null,
+    "confounder_in_data": false,
+    "notes": "diet category drives cholesterol; mixed (categorical->numeric)."
+  },
+  {
+    "x": "smoker",
+    "y": "lung_issue",
+    "true_label": "causal",
+    "confounder": null,
+    "confounder_in_data": false,
+    "notes": "smoking raises lung-issue probability; categorical/categorical."
+  },
+  {
+    "x": "rand_a",
+    "y": "rand_b",
+    "true_label": "chance",
+    "confounder": null,
+    "confounder_in_data": false,
+    "notes": "independent noise columns; any association is sampling noise."
+  },
+  {
+    "x": "rand_a",
+    "y": "rand_c",
+    "true_label": "chance",
+    "confounder": null,
+    "confounder_in_data": false,
+    "notes": "independent noise columns; any association is sampling noise."
+  },
+  {
+    "x": "rand_a",
+    "y": "rand_d",
+    "true_label": "chance",
+    "confounder": null,
+    "confounder_in_data": false,
+    "notes": "independent noise columns; any association is sampling noise."
+  },
+  {
+    "x": "rand_a",
+    "y": "rand_e",
+    "true_label": "chance",
+    "confounder": null,
+    "confounder_in_data": false,
+    "notes": "independent noise columns; any association is sampling noise."
+  },
+  {
+    "x": "rand_a",
+    "y": "rand_f",
+    "true_label": "chance",
+    "confounder": null,
+    "confounder_in_data": false,
+    "notes": "independent noise columns; any association is sampling noise."
+  },
+  {
+    "x": "rand_a",
+    "y": "rand_g",
+    "true_label": "chance",
+    "confounder": null,
+    "confounder_in_data": false,
+    "notes": "independent noise columns; any association is sampling noise."
+  },
+  {
+    "x": "rand_a",
+    "y": "rand_h",
+    "true_label": "chance",
+    "confounder": null,
+    "confounder_in_data": false,
+    "notes": "independent noise columns; any association is sampling noise."
+  },
+  {
+    "x": "rand_b",
+    "y": "rand_c",
+    "true_label": "chance",
+    "confounder": null,
+    "confounder_in_data": false,
+    "notes": "independent noise columns; any association is sampling noise."
+  },
+  {
+    "x": "rand_b",
+    "y": "rand_d",
+    "true_label": "chance",
+    "confounder": null,
+    "confounder_in_data": false,
+    "notes": "independent noise columns; any association is sampling noise."
+  },
+  {
+    "x": "rand_b",
+    "y": "rand_e",
+    "true_label": "chance",
+    "confounder": null,
+    "confounder_in_data": false,
+    "notes": "independent noise columns; any association is sampling noise."
+  },
+  {
+    "x": "rand_b",
+    "y": "rand_f",
+    "true_label": "chance",
+    "confounder": null,
+    "confounder_in_data": false,
+    "notes": "independent noise columns; any association is sampling noise."
+  },
+  {
+    "x": "rand_b",
+    "y": "rand_g",
+    "true_label": "chance",
+    "confounder": null,
+    "confounder_in_data": false,
+    "notes": "independent noise columns; any association is sampling noise."
+  },
+  {
+    "x": "rand_b",
+    "y": "rand_h",
+    "true_label": "chance",
+    "confounder": null,
+    "confounder_in_data": false,
+    "notes": "independent noise columns; any association is sampling noise."
+  },
+  {
+    "x": "rand_c",
+    "y": "rand_d",
+    "true_label": "chance",
+    "confounder": null,
+    "confounder_in_data": false,
+    "notes": "independent noise columns; any association is sampling noise."
+  },
+  {
+    "x": "rand_c",
+    "y": "rand_e",
+    "true_label": "chance",
+    "confounder": null,
+    "confounder_in_data": false,
+    "notes": "independent noise columns; any association is sampling noise."
+  },
+  {
+    "x": "rand_c",
+    "y": "rand_f",
+    "true_label": "chance",
+    "confounder": null,
+    "confounder_in_data": false,
+    "notes": "independent noise columns; any association is sampling noise."
+  },
+  {
+    "x": "rand_c",
+    "y": "rand_g",
+    "true_label": "chance",
+    "confounder": null,
+    "confounder_in_data": false,
+    "notes": "independent noise columns; any association is sampling noise."
+  },
+  {
+    "x": "rand_c",
+    "y": "rand_h",
+    "true_label": "chance",
+    "confounder": null,
+    "confounder_in_data": false,
+    "notes": "independent noise columns; any association is sampling noise."
+  },
+  {
+    "x": "rand_d",
+    "y": "rand_e",
+    "true_label": "chance",
+    "confounder": null,
+    "confounder_in_data": false,
+    "notes": "independent noise columns; any association is sampling noise."
+  },
+  {
+    "x": "rand_d",
+    "y": "rand_f",
+    "true_label": "chance",
+    "confounder": null,
+    "confounder_in_data": false,
+    "notes": "independent noise columns; any association is sampling noise."
+  },
+  {
+    "x": "rand_d",
+    "y": "rand_g",
+    "true_label": "chance",
+    "confounder": null,
+    "confounder_in_data": false,
+    "notes": "independent noise columns; any association is sampling noise."
+  },
+  {
+    "x": "rand_d",
+    "y": "rand_h",
+    "true_label": "chance",
+    "confounder": null,
+    "confounder_in_data": false,
+    "notes": "independent noise columns; any association is sampling noise."
+  },
+  {
+    "x": "rand_e",
+    "y": "rand_f",
+    "true_label": "chance",
+    "confounder": null,
+    "confounder_in_data": false,
+    "notes": "independent noise columns; any association is sampling noise."
+  },
+  {
+    "x": "rand_e",
+    "y": "rand_g",
+    "true_label": "chance",
+    "confounder": null,
+    "confounder_in_data": false,
+    "notes": "independent noise columns; any association is sampling noise."
+  },
+  {
+    "x": "rand_e",
+    "y": "rand_h",
+    "true_label": "chance",
+    "confounder": null,
+    "confounder_in_data": false,
+    "notes": "independent noise columns; any association is sampling noise."
+  },
+  {
+    "x": "rand_f",
+    "y": "rand_g",
+    "true_label": "chance",
+    "confounder": null,
+    "confounder_in_data": false,
+    "notes": "independent noise columns; any association is sampling noise."
+  },
+  {
+    "x": "rand_f",
+    "y": "rand_h",
+    "true_label": "chance",
+    "confounder": null,
+    "confounder_in_data": false,
+    "notes": "independent noise columns; any association is sampling noise."
+  },
+  {
+    "x": "rand_g",
+    "y": "rand_h",
+    "true_label": "chance",
+    "confounder": null,
+    "confounder_in_data": false,
+    "notes": "independent noise columns; any association is sampling noise."
+  }
+]

@@ -1,0 +1,292 @@
+{
+  "pairs": [
+    {
+      "x": "gpu_auslastung_pct",
+      "y": "cpu_auslastung_pct",
+      "true_label": "confounder",
+      "confounder": "aktive_jobs",
+      "confounder_in_data": true,
+      "notes": ""
+    },
+    {
+      "x": "serverraum_temp_c",
+      "y": "kuehlung_stromverbrauch_kw",
+      "true_label": "confounder",
+      "confounder": "it_stromverbrauch_kw",
+      "confounder_in_data": true,
+      "notes": ""
+    },
+    {
+      "x": "luefterdrehzahl_rpm",
+      "y": "kuehlung_stromverbrauch_kw",
+      "true_label": "confounder",
+      "confounder": "it_stromverbrauch_kw",
+      "confounder_in_data": true,
+      "notes": ""
+    },
+    {
+      "x": "aktive_jobs",
+      "y": "gpu_auslastung_pct",
+      "true_label": "causal",
+      "confounder": null,
+      "confounder_in_data": false,
+      "notes": ""
+    },
+    {
+      "x": "aktive_jobs",
+      "y": "cpu_auslastung_pct",
+      "true_label": "causal",
+      "confounder": null,
+      "confounder_in_data": false,
+      "notes": ""
+    },
+    {
+      "x": "aktive_jobs",
+      "y": "it_stromverbrauch_kw",
+      "true_label": "causal",
+      "confounder": null,
+      "confounder_in_data": false,
+      "notes": ""
+    },
+    {
+      "x": "aktive_jobs",
+      "y": "kuehlung_stromverbrauch_kw",
+      "true_label": "causal",
+      "confounder": null,
+      "confounder_in_data": false,
+      "notes": ""
+    },
+    {
+      "x": "aktive_jobs",
+      "y": "serverraum_temp_c",
+      "true_label": "causal",
+      "confounder": null,
+      "confounder_in_data": false,
+      "notes": ""
+    },
+    {
+      "x": "aktive_jobs",
+      "y": "luefterdrehzahl_rpm",
+      "true_label": "causal",
+      "confounder": null,
+      "confounder_in_data": false,
+      "notes": ""
+    },
+    {
+      "x": "gpu_auslastung_pct",
+      "y": "it_stromverbrauch_kw",
+      "true_label": "causal",
+      "confounder": null,
+      "confounder_in_data": false,
+      "notes": ""
+    },
+    {
+      "x": "gpu_auslastung_pct",
+      "y": "kuehlung_stromverbrauch_kw",
+      "true_label": "causal",
+      "confounder": null,
+      "confounder_in_data": false,
+      "notes": ""
+    },
+    {
+      "x": "gpu_auslastung_pct",
+      "y": "serverraum_temp_c",
+      "true_label": "causal",
+      "confounder": null,
+      "confounder_in_data": false,
+      "notes": ""
+    },
+    {
+      "x": "gpu_auslastung_pct",
+      "y": "luefterdrehzahl_rpm",
+      "true_label": "causal",
+      "confounder": null,
+      "confounder_in_data": false,
+      "notes": ""
+    },
+    {
+      "x": "cpu_auslastung_pct",
+      "y": "it_stromverbrauch_kw",
+      "true_label": "causal",
+      "confounder": null,
+      "confounder_in_data": false,
+      "notes": ""
+    },
+    {
+      "x": "cpu_auslastung_pct",
+      "y": "kuehlung_stromverbrauch_kw",
+      "true_label": "causal",
+      "confounder": null,
+      "confounder_in_data": false,
+      "notes": ""
+    },
+    {
+      "x": "cpu_auslastung_pct",
+      "y": "serverraum_temp_c",
+      "true_label": "causal",
+      "confounder": null,
+      "confounder_in_data": false,
+      "notes": ""
+    },
+    {
+      "x": "cpu_auslastung_pct",
+      "y": "luefterdrehzahl_rpm",
+      "true_label": "causal",
+      "confounder": null,
+      "confounder_in_data": false,
+      "notes": ""
+    },
+    {
+      "x": "it_stromverbrauch_kw",
+      "y": "kuehlung_stromverbrauch_kw",
+      "true_label": "causal",
+      "confounder": null,
+      "confounder_in_data": false,
+      "notes": ""
+    },
+    {
+      "x": "it_stromverbrauch_kw",
+      "y": "serverraum_temp_c",
+      "true_label": "causal",
+      "confounder": null,
+      "confounder_in_data": false,
+      "notes": ""
+    },
+    {
+      "x": "it_stromverbrauch_kw",
+      "y": "luefterdrehzahl_rpm",
+      "true_label": "causal",
+      "confounder": null,
+      "confounder_in_data": false,
+      "notes": ""
+    },
+    {
+      "x": "serverraum_temp_c",
+      "y": "luefterdrehzahl_rpm",
+      "true_label": "causal",
+      "confounder": null,
+      "confounder_in_data": false,
+      "notes": ""
+    },
+    {
+      "x": "aussentemperatur_c",
+      "y": "kuehlung_stromverbrauch_kw",
+      "true_label": "causal",
+      "confounder": null,
+      "confounder_in_data": false,
+      "notes": ""
+    },
+    {
+      "x": "aussentemperatur_c",
+      "y": "aktive_jobs",
+      "true_label": "chance",
+      "confounder": null,
+      "confounder_in_data": false,
+      "notes": ""
+    },
+    {
+      "x": "aussentemperatur_c",
+      "y": "gpu_auslastung_pct",
+      "true_label": "chance",
+      "confounder": null,
+      "confounder_in_data": false,
+      "notes": ""
+    },
+    {
+      "x": "aussentemperatur_c",
+      "y": "cpu_auslastung_pct",
+      "true_label": "chance",
+      "confounder": null,
+      "confounder_in_data": false,
+      "notes": ""
+    },
+    {
+      "x": "aussentemperatur_c",
+      "y": "it_stromverbrauch_kw",
+      "true_label": "chance",
+      "confounder": null,
+      "confounder_in_data": false,
+      "notes": ""
+    },
+    {
+      "x": "aussentemperatur_c",
+      "y": "serverraum_temp_c",
+      "true_label": "chance",
+      "confounder": null,
+      "confounder_in_data": false,
+      "notes": ""
+    },
+    {
+      "x": "aussentemperatur_c",
+      "y": "luefterdrehzahl_rpm",
+      "true_label": "chance",
+      "confounder": null,
+      "confounder_in_data": false,
+      "notes": ""
+    },
+    {
+      "x": "netzwerk_latenz_ms",
+      "y": "aktive_jobs",
+      "true_label": "chance",
+      "confounder": null,
+      "confounder_in_data": false,
+      "notes": ""
+    },
+    {
+      "x": "netzwerk_latenz_ms",
+      "y": "gpu_auslastung_pct",
+      "true_label": "chance",
+      "confounder": null,
+      "confounder_in_data": false,
+      "notes": ""
+    },
+    {
+      "x": "netzwerk_latenz_ms",
+      "y": "cpu_auslastung_pct",
+      "true_label": "chance",
+      "confounder": null,
+      "confounder_in_data": false,
+      "notes": ""
+    },
+    {
+      "x": "netzwerk_latenz_ms",
+      "y": "it_stromverbrauch_kw",
+      "true_label": "chance",
+      "confounder": null,
+      "confounder_in_data": false,
+      "notes": ""
+    },
+    {
+      "x": "netzwerk_latenz_ms",
+      "y": "kuehlung_stromverbrauch_kw",
+      "true_label": "chance",
+      "confounder": null,
+      "confounder_in_data": false,
+      "notes": ""
+    },
+    {
+      "x": "netzwerk_latenz_ms",
+      "y": "serverraum_temp_c",
+      "true_label": "chance",
+      "confounder": null,
+      "confounder_in_data": false,
+      "notes": ""
+    },
+    {
+      "x": "netzwerk_latenz_ms",
+      "y": "luefterdrehzahl_rpm",
+      "true_label": "chance",
+      "confounder": null,
+      "confounder_in_data": false,
+      "notes": ""
+    },
+    {
+      "x": "netzwerk_latenz_ms",
+      "y": "aussentemperatur_c",
+      "true_label": "chance",
+      "confounder": null,
+      "confounder_in_data": false,
+      "notes": ""
+    }
+  ]
+}

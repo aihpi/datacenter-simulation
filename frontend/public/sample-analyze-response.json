@@ -1,0 +1,63 @@
+{
+  "dataset": "synthetic.csv",
+  "description": "Seeded synthetic dataset with known causal structure across study, health, weather, wealth, and pure-noise variables.",
+  "n_tested_pairs": 120,
+  "pairs": [
+    {
+      "x": "hours_studied",
+      "y": "exam_score",
+      "stat": { "method": "pearson", "coefficient": 0.91, "effect_size": 0.91, "p_value": 1e-40, "p_adjusted": 2e-39, "n": 600, "significant": true },
+      "verdict": { "x": "hours_studied", "y": "exam_score", "verdict": "causal", "confidence": 0.92, "confounder": null, "confounder_in_data": false, "reasoning": "More study hours plausibly raise exam scores and the effect is strong and monotonic. No obvious common cause is present among the columns.", "needed_data": "A randomized study where hours are assigned, not chosen." },
+      "verification": null,
+      "plot": { "kind": "scatter", "x_label": "hours_studied", "y_label": "exam_score", "points": [ {"x":1.2,"y":18.0},{"x":3.4,"y":35.0},{"x":5.1,"y":48.0},{"x":7.8,"y":71.0},{"x":9.3,"y":88.0},{"x":2.0,"y":22.0},{"x":6.0,"y":55.0} ], "bars": [], "value_label": null }
+    },
+    {
+      "x": "ice_cream_sales",
+      "y": "drownings",
+      "stat": { "method": "pearson", "coefficient": 0.86, "effect_size": 0.86, "p_value": 1e-30, "p_adjusted": 5e-29, "n": 600, "significant": true },
+      "verdict": { "x": "ice_cream_sales", "y": "drownings", "verdict": "confounder", "confidence": 0.88, "confounder": "temperature", "confounder_in_data": true, "reasoning": "Both ice cream sales and drownings rise with temperature, a column present in the data. The direct link is implausible.", "needed_data": "Compare days at the same temperature, or control for it." },
+      "verification": { "confounder": "temperature", "method": "partial_pearson", "r_before": 0.86, "r_after": 0.04, "p_after": 0.41, "n": 600, "threshold_abs": 0.15, "collapsed": true, "note": "Controlling for temperature collapses the association (0.86 -> 0.04): the data confirms the confounder." },
+      "plot": { "kind": "scatter", "x_label": "ice_cream_sales", "y_label": "drownings", "points": [ {"x":120,"y":2.1},{"x":340,"y":5.0},{"x":520,"y":8.0},{"x":700,"y":11.0},{"x":250,"y":4.0},{"x":600,"y":9.5} ], "bars": [], "value_label": null }
+    },
+    {
+      "x": "tv_per_capita",
+      "y": "life_expectancy",
+      "stat": { "method": "pearson", "coefficient": 0.74, "effect_size": 0.74, "p_value": 1e-20, "p_adjusted": 3e-19, "n": 600, "significant": true },
+      "verdict": { "x": "tv_per_capita", "y": "life_expectancy", "verdict": "confounder", "confidence": 0.8, "confounder": "national_wealth", "confounder_in_data": false, "reasoning": "Wealthier places have both more TVs and longer lives; wealth is the likely common cause but it is not in the data.", "needed_data": "A measure of national wealth or income per capita to control for." },
+      "verification": null,
+      "plot": { "kind": "scatter", "x_label": "tv_per_capita", "y_label": "life_expectancy", "points": [ {"x":2.0,"y":58},{"x":5.0,"y":62},{"x":8.0,"y":67},{"x":11.0,"y":72},{"x":14.0,"y":77},{"x":6.0,"y":64} ], "bars": [], "value_label": null }
+    },
+    {
+      "x": "resting_heart_rate",
+      "y": "exercise_minutes",
+      "stat": { "method": "pearson", "coefficient": -0.79, "effect_size": 0.79, "p_value": 1e-22, "p_adjusted": 4e-21, "n": 600, "significant": true },
+      "verdict": { "x": "resting_heart_rate", "y": "exercise_minutes", "verdict": "reverse_causal", "confidence": 0.78, "confounder": null, "confounder_in_data": false, "reasoning": "Exercise lowers resting heart rate, so the causal arrow points from exercise to heart rate, not the reverse.", "needed_data": "A controlled exercise intervention measuring heart rate before and after." },
+      "verification": null,
+      "plot": { "kind": "scatter", "x_label": "resting_heart_rate", "y_label": "exercise_minutes", "points": [ {"x":79,"y":5},{"x":74,"y":30},{"x":71,"y":55},{"x":68,"y":80},{"x":76,"y":20},{"x":70,"y":70} ], "bars": [], "value_label": null }
+    },
+    {
+      "x": "talent",
+      "y": "looks",
+      "stat": { "method": "pearson", "coefficient": -0.42, "effect_size": 0.42, "p_value": 1e-8, "p_adjusted": 2e-7, "n": 280, "significant": true },
+      "verdict": { "x": "talent", "y": "looks", "verdict": "selection", "confidence": 0.7, "confounder": null, "confounder_in_data": false, "reasoning": "Among a selected group (e.g. admitted/celebrities), talent and looks trade off even though they are independent in the full population.", "needed_data": "The unselected population, or the selection rule that defined the sample." },
+      "verification": null,
+      "plot": { "kind": "scatter", "x_label": "talent", "y_label": "looks", "points": [ {"x":2.1,"y":-0.3},{"x":1.0,"y":0.9},{"x":-0.2,"y":1.8},{"x":0.5,"y":1.1},{"x":1.6,"y":0.2},{"x":-0.5,"y":2.2} ], "bars": [], "value_label": null }
+    },
+    {
+      "x": "diet_type",
+      "y": "cholesterol",
+      "stat": { "method": "correlation_ratio", "coefficient": 0.66, "effect_size": 0.66, "p_value": 1e-15, "p_adjusted": 2e-14, "n": 600, "significant": true },
+      "verdict": { "x": "diet_type", "y": "cholesterol", "verdict": "causal", "confidence": 0.85, "confounder": null, "confounder_in_data": false, "reasoning": "Dietary fat intake category drives mean cholesterol upward in a clear dose-response. No common cause is evident.", "needed_data": "A randomized diet trial." },
+      "verification": null,
+      "plot": { "kind": "grouped_bar", "x_label": "diet_type", "y_label": "cholesterol", "points": [], "bars": [ {"category":"low_fat","value":172.0,"n":200},{"category":"balanced","value":188.0,"n":200},{"category":"high_fat","value":205.0,"n":200} ], "value_label": "mean cholesterol" }
+    },
+    {
+      "x": "rand_a",
+      "y": "rand_c",
+      "stat": { "method": "pearson", "coefficient": 0.05, "effect_size": 0.05, "p_value": 0.62, "p_adjusted": 0.98, "n": 600, "significant": false },
+      "verdict": { "x": "rand_a", "y": "rand_c", "verdict": "chance", "confidence": 0.2, "confounder": null, "confounder_in_data": false, "reasoning": "The association is weak and not significant after multiple-testing correction; this pair looks like sampling noise.", "needed_data": "More data, or a pre-registered hypothesis linking these variables." },
+      "verification": null,
+      "plot": { "kind": "scatter", "x_label": "rand_a", "y_label": "rand_c", "points": [ {"x":0.3,"y":-1.1},{"x":-0.8,"y":0.4},{"x":1.2,"y":0.9},{"x":-0.2,"y":-0.3},{"x":0.7,"y":1.5},{"x":-1.4,"y":0.1} ], "bars": [], "value_label": null }
+    }
+  ]
+}

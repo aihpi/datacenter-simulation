@@ -1,0 +1,13 @@
+{
+  "description": "Per-capita chocolate consumption vs Nobel laureates.",
+  "pairs": [
+    {
+      "x": "chocolate_kg",
+      "y": "nobel_per_capita",
+      "true_label": "confounder",
+      "confounder": "national_wealth",
+      "confounder_in_data": false,
+      "notes": "National wealth drives both; it is absent from the data."
+    }
+  ]
+}
